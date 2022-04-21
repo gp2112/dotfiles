@@ -1,0 +1,28 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[character] 
+format = "$symbol "
+
+success_symbol = "[❯](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+error_symbol = "[❯](bold red)"
+
+[sudo]
+disabled = false
+
+
+[package]
+disabled = true
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💦 "
+unknown_symbol = "? "
+
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
