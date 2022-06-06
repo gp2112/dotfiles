@@ -1,7 +1,7 @@
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
-set mouse=v                 " middle-click paste with 
+set mouse=a             " middle-click paste with 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
 set tabstop=4               " number of columns occupied by a tab 
@@ -34,13 +34,19 @@ call plug#begin()
  Plug 'honza/vim-snippets'
  Plug 'git@github.com:preservim/nerdtree.git'
  Plug 'preservim/nerdcommenter'
+ Plug 'preservim/vim-markdown'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'vim-scripts/dbext.vim'
 call plug#end()
 
 
 syntax on
 colorscheme terafox 
-
+set conceallevel=2
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
 " Use CTRL+n to toggle FileTree
 map <C-n> :NERDTreeToggle<CR>
